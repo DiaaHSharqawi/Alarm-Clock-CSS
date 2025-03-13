@@ -1,0 +1,37 @@
+// Styles for the clock legs, including mixin for leg rotation and positioning
+
+@import "./../../shared/colors/colors.scss";
+
+@mixin clock-leg($rotate) {
+  width: 250px;
+  height: 40px;
+
+  background-color: $white-color;
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  transform: rotate($rotate);
+}
+
+.clock-legs {
+  position: absolute; // Parent .alarm-clock has a relative position,
+
+  width: 100%;
+  height: 100%;
+
+  & .left-leg {
+    @include clock-leg(135deg);
+
+    bottom: 0;
+    left: 15%;
+  }
+
+  & .right-leg {
+    @include clock-leg(45deg);
+
+    bottom: 0;
+    right: 15%;
+  }
+}

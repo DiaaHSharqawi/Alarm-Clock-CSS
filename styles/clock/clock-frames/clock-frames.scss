@@ -1,0 +1,69 @@
+// SCSS styles for the clock frames of an alarm clock component.
+// Contains mixins for centering elements and creating circular shapes.
+
+@import "./../../shared/colors/colors.scss";
+
+@mixin flex-prerfect-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin circle($size, $color) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+  border-radius: 50%;
+}
+
+.alarm-clock {
+  @include flex-prerfect-center;
+
+  height: 600px;
+  width: 600px;
+
+  position: relative;
+}
+
+.outer-frame {
+  @include circle(600px, $sky-blue-color);
+  @include flex-prerfect-center;
+
+  position: absolute;
+
+  z-index: 1;
+}
+
+.inner-frame-black {
+  @include circle(500px, $black-color);
+  @include flex-prerfect-center;
+
+  position: absolute;
+
+  z-index: 2;
+}
+
+.inner-frame-dark-blue {
+  @include circle(450px, $deep-blue-color);
+  @include flex-prerfect-center;
+
+  position: absolute;
+
+  z-index: 3;
+}
+
+.inner-frame-white {
+  @include circle(400px, white);
+  @include flex-prerfect-center;
+
+  position: absolute;
+
+  z-index: 4;
+}
+
+.clock-pivot {
+  @include circle(80px, $orange-color);
+  @include flex-prerfect-center;
+
+  position: absolute;
+}

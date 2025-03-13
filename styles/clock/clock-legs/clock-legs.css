@@ -1,0 +1,28 @@
+/*
+    *Contains color variable definitions for the clock task.
+*/
+.clock-legs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.clock-legs .left-leg {
+  width: 250px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  transform: rotate(135deg);
+  bottom: 0;
+  left: 15%;
+}
+.clock-legs .right-leg {
+  width: 250px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  bottom: 0;
+  right: 15%;
+}/*# sourceMappingURL=clock-legs.css.map */

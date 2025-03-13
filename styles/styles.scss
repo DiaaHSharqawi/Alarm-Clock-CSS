@@ -1,0 +1,14 @@
+@import "./reset/reset.scss";
+@import "./shared/colors/colors.scss";
+@import "./clock/alarm-clock.scss";
+
+body,
+section {
+  background-color: $light-orange-color;
+  height: 120vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,0 +1,56 @@
+/*
+    *Contains color variable definitions for the clock task.
+*/
+.clock-pivot-inner {
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-pivot-inner .hour-hand {
+  width: 25px;
+  height: 350px;
+  background: linear-gradient(to bottom, #ffa500 50%, transparent 50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+  -webkit-clip-path: inset(0 -50% 50% 0);
+          clip-path: inset(0 -50% 50% 0);
+  position: absolute;
+  border-radius: 45%;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(120deg);
+}
+.clock-pivot-inner .minute-hand {
+  width: 25px;
+  height: 350px;
+  background: linear-gradient(to bottom, #ffa500 50%, transparent 50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+  -webkit-clip-path: inset(0 -50% 50% 0);
+          clip-path: inset(0 -50% 50% 0);
+  position: absolute;
+  border-radius: 45%;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(330deg);
+}
+.clock-pivot-inner .second-hand {
+  width: 8px;
+  height: 220px;
+  background: linear-gradient(to bottom, #ffa500 50%, transparent 50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+  -webkit-clip-path: inset(0 -50% 50% 0);
+          clip-path: inset(0 -50% 50% 0);
+  position: absolute;
+  border-radius: 45%;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(220deg);
+  border-radius: 10px;
+}/*# sourceMappingURL=alarm-clock-clockwise.css.map */

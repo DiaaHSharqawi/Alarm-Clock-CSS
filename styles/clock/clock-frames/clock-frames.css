@@ -1,0 +1,70 @@
+/*
+    *Contains color variable definitions for the clock task.
+*/
+.alarm-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 600px;
+  position: relative;
+}
+
+.outer-frame {
+  width: 600px;
+  height: 600px;
+  background-color: #439af8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.inner-frame-black {
+  width: 500px;
+  height: 500px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+}
+
+.inner-frame-dark-blue {
+  width: 450px;
+  height: 450px;
+  background-color: #003c88;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+}
+
+.inner-frame-white {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 4;
+}
+
+.clock-pivot {
+  width: 80px;
+  height: 80px;
+  background-color: #ffa500;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}/*# sourceMappingURL=clock-frames.css.map */

@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+    *Contains color variable definitions for the clock task.
+*/
+/*
+    *Contains color variable definitions for the clock task.
+*/
+.alarm-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 600px;
+  position: relative;
+}
+
+.outer-frame {
+  width: 600px;
+  height: 600px;
+  background-color: #439af8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.inner-frame-black {
+  width: 500px;
+  height: 500px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+}
+
+.inner-frame-dark-blue {
+  width: 450px;
+  height: 450px;
+  background-color: #003c88;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+}
+
+.inner-frame-white {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 4;
+}
+
+.clock-pivot {
+  width: 80px;
+  height: 80px;
+  background-color: #ffa500;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+/*
+    *Contains color variable definitions for the clock task.
+*/
+.clock-legs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.clock-legs .left-leg {
+  width: 250px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  transform: rotate(135deg);
+  bottom: 0;
+  left: 15%;
+}
+.clock-legs .right-leg {
+  width: 250px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  bottom: 0;
+  right: 15%;
+}
+
+/*
+    *Contains color variable definitions for the clock task.
+*/
+/* 
+  Styles for the clock bells and their hammers( 
+  white part that hits the bell to make a sound)
+*/
+.clock-bells {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.clock-bells .left-bell {
+  width: 130px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  transform: rotate(135deg);
+}
+.clock-bells .left-bell::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  -webkit-clip-path: circle(50% at top);
+          clip-path: circle(50% at top);
+  background-color: #439af8;
+  transform: translateX(50%);
+  top: 100%;
+  left: -100%;
+}
+.clock-bells .right-bell {
+  width: 130px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  transform: rotate(45deg);
+}
+.clock-bells .right-bell::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  -webkit-clip-path: circle(50% at bottom);
+          clip-path: circle(50% at bottom);
+  background-color: #439af8;
+  transform: translateX(50%);
+  bottom: 100%;
+  left: -100%;
+}
+
+/*
+    *Contains color variable definitions for the clock task.
+*/
+.clock-pivot-inner {
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-pivot-inner .hour-hand {
+  width: 25px;
+  height: 350px;
+  background: linear-gradient(to bottom, #ffa500 50%, transparent 50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+  -webkit-clip-path: inset(0 -50% 50% 0);
+          clip-path: inset(0 -50% 50% 0);
+  position: absolute;
+  border-radius: 45%;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(120deg);
+}
+.clock-pivot-inner .minute-hand {
+  width: 25px;
+  height: 350px;
+  background: linear-gradient(to bottom, #ffa500 50%, transparent 50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+  -webkit-clip-path: inset(0 -50% 50% 0);
+          clip-path: inset(0 -50% 50% 0);
+  position: absolute;
+  border-radius: 45%;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(330deg);
+}
+.clock-pivot-inner .second-hand {
+  width: 8px;
+  height: 220px;
+  background: linear-gradient(to bottom, #ffa500 50%, transparent 50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+  -webkit-clip-path: inset(0 -50% 50% 0);
+          clip-path: inset(0 -50% 50% 0);
+  position: absolute;
+  border-radius: 45%;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(220deg);
+  border-radius: 10px;
+}
+
+/*
+    *Contains color variable definitions for the clock task.
+*/
+.dot-clocks {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.dot-clocks .dot-clock-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #ffa500;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  transform: rotate(calc(var(--n) * 30deg)) translate(0, -160px);
+}
+
+body,
+section {
+  background-color: #ffd278;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}/*# sourceMappingURL=styles.css.map */

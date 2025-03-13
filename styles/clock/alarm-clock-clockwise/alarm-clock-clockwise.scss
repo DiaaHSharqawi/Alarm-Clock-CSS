@@ -1,0 +1,41 @@
+@import "./../../shared/colors/colors.scss";
+
+// Mixin for clock hands and styles for clock pivot and hands
+
+@mixin clock-hand($width, $height, $rotation) {
+  width: $width;
+  height: $height;
+  background: linear-gradient(to bottom, $orange-color 50%, transparent 50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+  clip-path: inset(0 -50% 50% 0);
+  position: absolute;
+  border-radius: 45%;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate($rotation);
+}
+
+.clock-pivot-inner {
+  width: 70px;
+  height: 70px;
+  background-color: $white-color;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .hour-hand {
+    @include clock-hand(25px, 350px, 120deg);
+  }
+
+  & .minute-hand {
+    @include clock-hand(25px, 350px, 330deg);
+  }
+
+  & .second-hand {
+    @include clock-hand(8px, 220px, 220deg);
+    border-radius: 10px;
+  }
+}
