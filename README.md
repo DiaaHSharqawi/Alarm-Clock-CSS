@@ -16,6 +16,11 @@ This is a visually appealing and meticulously crafted alarm clock project built 
 - **Responsive Design:**
   - The clock is designed to be responsive and visually appealing across various devices.
 
+## Demo
+
+Check out the live demo of the project:
+[Alarm Clock CSS Demo](https://diaahsharqawi.github.io/Alarm-Clock-CSS/)
+
 ## Folder Structure
 
 - `styles/`: Contains SCSS and CSS files for styling the clock components.
